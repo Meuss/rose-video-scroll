@@ -12,11 +12,13 @@ The video html should be structured like this (replacing the url to the video):
 
 This is the hardest part for you I guess, because the attributes have to be the same (id, tabindex, autobuffer, preload)
 
-If you cannot do this, I can add them later by javascript on load event. But they should be somewhere in the Designer on the video element, maybe under _custom attributes_ or something like that..
+If you cannot do this, I can add them later by javascript on load event. But they should be somewhere in the Designer on the video element, maybe under _custom attributes_ or something like that.
+
+Also, be sure that the video file size is not too huge...
 
 ### CSS
 
-Add the css to the video element (via the Designer):
+Add the css to the video element (via the Designer) - put it fixed, wherever you want:
 
 ```
 #rose-video {
