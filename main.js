@@ -1,12 +1,12 @@
 import "./style.css";
 
 var frameNumber = 0;
-var playbackConst = 500;
-var bodyHeight = document.getElementById("body");
+var playbackConst = 200;
+var body = document.getElementsByTagName("body");
 var vid = document.getElementById("rose-video");
 
 vid.addEventListener("loadedmetadata", function () {
-  bodyHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+  body.style.height = Math.floor(vid.duration) * playbackConst + "px";
 });
 
 function scrollPlay() {
