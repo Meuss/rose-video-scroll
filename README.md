@@ -1,5 +1,8 @@
 # Adapting for webflow
 
+> Preview here:
+> https://meuss.github.io/rose-video-scroll/
+
 ### Video element
 
 The video html should be structured like this (replacing the url to the video):
