@@ -10,6 +10,5 @@
   },
   "devDependencies": {
     "vite": "^2.1.5"
-  },
-  "homepage": "http://Meuss.github.com/rose-video-scroll"
+  }
 }
