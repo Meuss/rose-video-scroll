@@ -2,7 +2,7 @@ import "./style.css";
 
 var frameNumber = 0;
 var playbackConst = 200;
-var body = document.getElementsByTagName("body");
+var body = document.getElementsByName("body");
 var vid = document.getElementById("rose-video");
 
 vid.addEventListener("loadedmetadata", function () {
