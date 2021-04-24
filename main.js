@@ -1,18 +1,14 @@
 import "./style.css";
 
-var frameNumber = 0;
-var playbackConst = 200;
-var body = document.getElementsByName("body");
-var vid = document.getElementById("rose-video");
+const media = document.querySelector("video");
+media.pause();
+media.currentTime = 0;
+const pageHeight = document.body.offsetHeight - window.innerHeight;
 
-vid.addEventListener("loadedmetadata", function () {
-  body.style.height = Math.floor(vid.duration) * playbackConst + "px";
+window.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+  let scrollPercent = scrollTop / pageHeight;
+  let scrollPercentRounded = Math.round(scrollPercent * 100);
+  let amount = ((media.duration / 100) * scrollPercentRounded).toFixed(1);
+  media.currentTime = amount;
 });
-
-function scrollPlay() {
-  var frameNumber = window.pageYOffset / playbackConst;
-  vid.currentTime = frameNumber;
-  window.requestAnimationFrame(scrollPlay);
-}
-
-window.requestAnimationFrame(scrollPlay);
